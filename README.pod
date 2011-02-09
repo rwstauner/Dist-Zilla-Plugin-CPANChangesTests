@@ -1,0 +1,7 @@
+=head1 Dist::Zilla::Plugin::CPANChangesTests
+
+Automatically add:
+	
+  xt/release/cpan-changes.t - a standard Test::CPAN::Changes test
+
+=cut

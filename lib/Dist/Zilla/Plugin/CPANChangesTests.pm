@@ -1,10 +1,13 @@
 package Dist::Zilla::Plugin::CPANChangesTests;
-# ABSTRACT: Add release tests using Test::CPAN::Changes
+# ABSTRACT: Deprecated
 
 =head1 SYNOPSIS
 
+This module is B<deprecated> in favor of the more configurable and better named
+L<Dist::Zilla::Plugin::Test::CPAN::Changes>.
+
   # dist.ini
-  [CPANChangesTests]
+  [Test::CPAN::Changes]
 
 =cut
 
@@ -12,6 +15,16 @@ use strict;
 use warnings;
 use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
+
+before gather_files => sub {
+	my ($self) = @_;
+	$self->log($_) for (
+		'!',
+		__PACKAGE__ . ' is deprecated.',
+		'Please use Dist::Zilla::Plugin::Test::CPAN::Changes.',
+		'!',
+	);
+};
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
@@ -28,8 +41,7 @@ following files:
 =head1 SEE ALSO
 
 =for :list
-* L<CPAN::Changes>
-* L<Test::CPAN::Changes>
+* L<Dist::Zilla::Plugin::Test::CPAN::Changes>
 
 =cut
 

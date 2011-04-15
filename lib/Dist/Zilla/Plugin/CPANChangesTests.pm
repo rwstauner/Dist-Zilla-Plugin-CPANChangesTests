@@ -1,3 +1,4 @@
+# vim: set ts=2 sts=2 sw=2 expandtab smarttab:
 use strict;
 use warnings;
 package Dist::Zilla::Plugin::CPANChangesTests;
@@ -17,13 +18,13 @@ use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
 
 before gather_files => sub {
-	my ($self) = @_;
-	$self->log($_) for (
-		'!',
-		__PACKAGE__ . ' is deprecated.',
-		'Please use Dist::Zilla::Plugin::Test::CPAN::Changes.',
-		'!',
-	);
+  my ($self) = @_;
+  $self->log($_) for (
+    '!',
+    __PACKAGE__ . ' is deprecated.',
+    'Please use Dist::Zilla::Plugin::Test::CPAN::Changes.',
+    '!',
+  );
 };
 
 __PACKAGE__->meta->make_immutable;

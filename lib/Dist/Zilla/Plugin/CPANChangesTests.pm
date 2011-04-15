@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 package Dist::Zilla::Plugin::CPANChangesTests;
 # ABSTRACT: Deprecated
 
@@ -11,8 +13,6 @@ L<Dist::Zilla::Plugin::Test::CPAN::Changes>.
 
 =cut
 
-use strict;
-use warnings;
 use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
 

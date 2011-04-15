@@ -2,6 +2,8 @@ Revision history for Dist-Zilla-Plugin-CPANChangesTests
 
 {{$NEXT}}
 
+  - Superficial dist/release changes
+
 1.002 2011-04-11
 
  - Deprecated in favor of the more configurable and better named
